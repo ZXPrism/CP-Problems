@@ -6,7 +6,7 @@ function AddProblem(probName)
     targets = {"checker", "generator", "solution", "validator"}
 
     for _, targetName in pairs(targets) do 
-        target(targetName)
+        target(probName .. "_" .. targetName)
             set_languages("cxx23")
             set_kind("binary")
             set_warnings("all", "error")
@@ -23,3 +23,4 @@ function AddProblem(probName)
 end
 
 AddProblem("sort-by-swap")
+AddProblem("sum-of-subsequences")
